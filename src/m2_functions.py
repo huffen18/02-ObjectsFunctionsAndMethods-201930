@@ -3,8 +3,8 @@ Practice DEFINING and CALLING
      FUNCTIONS
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
-         Aaron Wilkin, their colleagues, and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         Aaron Wilkin, their colleagues, and Elijah Huff.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ###############################################################################
 # TODO: 2.
@@ -21,6 +21,8 @@ import rosegraphics as rg
 
 
 def main():
+    answer = triangle(3, 4)
+    print(answer)
     """
     TESTS the functions that you will write below.
     You write the tests per the _TODO_s below.
@@ -40,7 +42,9 @@ def main():
 #   to test whether you defined the function correctly.
 #
 ###############################################################################
-
+import math
+def triangle(a, b):
+    return math.sqrt(a ** 2 + b ** 2)
 
 ###############################################################################
 # TODO: 4a.  Define a function immediately below this _TODO_.
@@ -69,6 +73,17 @@ def main():
 #   for the arguments) to test whether you defined the function correctly.
 #
 ###############################################################################
+window = rg.TurtleWindow()
+def turtle(d, c):
+    bob = rg.SimpleTurtle()
+    bob.pen = rg.Pen('green',c)
+    burris = rg.SimpleTurtle()
+    burris.pen = rg.Pen(d, 5)
+    bob.forward(100)
+    burris.backward(100)
+
+window.close_on_mouse_click()
+
 
 
 ###############################################################################
